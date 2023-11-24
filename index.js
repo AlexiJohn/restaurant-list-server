@@ -5,9 +5,6 @@ const cors = require("cors");
 const axios = require("axios");
 // enable CORS
 app.use(cors());
-// set the port on which our app wil run
-// important to read from environment variable if deploying
-const port = process.env.PORT || 5000;
 
 // basic string route to prevent Glitch error
 app.get("/", (req, res) => {
@@ -23,7 +20,7 @@ app.get("/restaurants", (req, res) => {
 });
 
 // console text when app is running
-app.listen(port, () => {
+app.listen(5000, () => {
     console.log(`Server listening at http://localhost:${port}`);
 });
 
